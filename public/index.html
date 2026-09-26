@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Batalha Secreta</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TELA DE MENU -->
+<section id="screen-menu" class="screen active">
+  <div class="menu-box">
+    <h1>BATALHA<br>SECRETA</h1>
+    <p class="subtitle">um chefe guarda um machado... e um preço absurdo</p>
+    <div class="menu-options">
+      <button class="menu-btn" data-difficulty="facil">FÁCIL</button>
+      <button class="menu-btn" data-difficulty="normal">NORMAL</button>
+      <button class="menu-btn" data-difficulty="dificil">DIFÍCIL</button>
+    </div>
+    <button id="btn-start" class="start-btn">COMEÇAR</button>
+    <p class="hint">toque nas setas ou use o teclado ← ↑ → ↓</p>
+  </div>
+</section>
+
+<!-- TELA DE BATALHA -->
+<section id="screen-battle" class="screen">
+  <div class="hud-top">
+    <div class="boss-name">HAMMER OF JUSTICE</div>
+    <div class="hpbar boss-hp"><div id="boss-hp-fill" class="hp-fill"></div></div>
+  </div>
+
+  <div id="dialogue-box" class="dialogue-box"></div>
+
+  <div id="arena" class="arena">
+    <div id="soul" class="soul"></div>
+  </div>
+
+  <div id="block-lane" class="block-lane"></div>
+
+  <div class="hud-bottom">
+    <div class="player-hp-row">
+      <span class="player-name">SUSIE</span>
+      <div class="hpbar player-hp"><div id="player-hp-fill" class="hp-fill"></div></div>
+      <span id="player-hp-text" class="hp-text">100/100</span>
+    </div>
+    <div class="action-row">
+      <button id="btn-attack" class="action-btn">ATACAR</button>
+      <button id="btn-guard" class="action-btn" disabled>DEFENDER</button>
+    </div>
+  </div>
+
+  <!-- controles de toque para celular -->
+  <div id="touch-pad" class="touch-pad">
+    <button class="pad-btn" data-dir="up">▲</button>
+    <div class="pad-row">
+      <button class="pad-btn" data-dir="left">◀</button>
+      <button class="pad-btn" data-dir="down">▼</button>
+      <button class="pad-btn" data-dir="right">▶</button>
+    </div>
+  </div>
+</section>
+
+<!-- TELA DE FIM -->
+<section id="screen-end" class="screen">
+  <div class="menu-box">
+    <h1 id="end-title">VITÓRIA</h1>
+    <p id="end-text" class="subtitle"></p>
+    <button id="btn-retry" class="start-btn">JOGAR DE NOVO</button>
+  </div>
+</section>
+
+<script src="game.js"></script>
+</body>
+</html>
