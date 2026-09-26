@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: batalha-secreta
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.20.0
+    autoDeploy: true
